@@ -1,7 +1,13 @@
 // pages/index.js or pages/index.tsx
+'use client'
+
+import {  useRouter } from "next/navigation";
+import { Color } from "three/src/Three.Core.js";
 
 export default function Home() {
-  return (
+  const router = useRouter();
+  return (<>
+
     <div style={{ width: '100vw', height: '100vh', overflow: 'hidden', margin: 0, padding: 0 }}>
       <iframe
         src="https://my.spline.design/blockchain-wYrxCHn7N1TBVrF590KLMxT7/"
@@ -16,6 +22,11 @@ export default function Home() {
         }}
         allowFullScreen
       />
+      <div>
+        <button onClick={() => {router.push('https://github.com')}}></button>
+      </div>
     </div>
+        
+    </>
   );
 }
