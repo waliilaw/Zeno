@@ -26,7 +26,6 @@ export default function Home() {
         <button onClick={() => {router.push('https://github.com')}}></button>
       </div>
     </div>
-        
     </>
   );
 }
